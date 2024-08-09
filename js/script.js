@@ -1,9 +1,16 @@
+const forms = document.querySelector("#forms");
+
+forms.addEventListener("submit", (e) => {
+  e.preventDefault();
+  calculateIMC();
+});
+
 function calculateIMC() {
   /* Valores do IMC */
   var weight = parseFloat(document.getElementById("weight").value);
   var height = parseFloat(document.getElementById("height").value);
 
-  if (isNaN(weight) || isNaN(height) || height === 0) {
+  if (isNaN(weight) || isNaN(height) || height === 0 || weight == 0) {
     document.getElementById("result").innerText =
       "Por favor querido(a), insira valores válidos!.";
     return;
