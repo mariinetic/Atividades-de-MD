@@ -1,142 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Site</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
     <title>Calculadora de IMC</title>
-    <style>
+  </head>
 
-        /* Fontes e mudanças de cor */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fde2e2; 
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-         
-         /* mudança para fundo branco */
-        .calculator-container {
-            background-color: #ffffff; 
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-        }
-
-         /* mudança do título */
-        h1 {
-            color: #ff66b2; 
-        }
-
-        /* Locações de botões */
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            box-sizing: border-box;
-        }
-        
-        /* decorações para fundo, texto e borda dos botões */
-        button {
-            background-color: #ffffff; 
-            color: #ff66b2; 
-            border: 1px solid #ff66b2; 
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-         /* degrade no click dos botões de informações */
-        button:hover {
-            background-color: #ff66b2; 
-            color: #ffffff; 
-        }
-
-        /* mudança de cor para mostrar resultado */
-        .result {
-            margin-top: 20px;
-            font-weight: bold;
-            color: #ff66b2; 
-        }
-
-        /* tamanho da foto e formato */
-        img {
-            width: 100px; 
-            border-radius: 50%; 
-            margin-right: 10px;
-        }
-    </style>
-</head>
-</div>
-</div>
-
-<style>
-    /* Estilo para o link de mais informações */
-    #moreinfo a {
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        text-shadow: 2px 2px 4px rgba(56, 54, 56, 0.8);
-        transition: color 0.3s;
-    }
-    
-    /* mudança de cor para click */
-    #moreinfo a:hover {
-        color: pink; 
-    }
-    #moreinfo a:active {
-        color: pink;  
-    }
-
-    /* Link para informações do IMC */
-</style>
-<div id="moreinfo">
-    <a href="https://www.saudebemestar.pt/pt/blog/nutricao/imc/#:~:text=Um%20IMC%20entre%20o%2018%2C5%20e%20os%2024%2C9%2C,menor%20risco%20e%20uma%20menor%20incid%C3%AAncia%20de%20doen%C3%A7as">
+  <body>
+    <div id="moreinfo">
+      <!-- Link para informações do IMC  -->
+      <a
+        href="https://www.saudebemestar.pt/pt/blog/nutricao/imc/#:~:text=Um%20IMC%20entre%20o%2018%2C5%20e%20os%2024%2C9%2C,menor%20risco%20e%20uma%20menor%20incid%C3%AAncia%20de%20doen%C3%A7as"
+      >
         Mais informações sobre o IMC
-    </a>
-    
-<body> 
+      </a>
+    </div>
+    <div class="calculator-container">
+      <img src="./assets/mymelody.png" alt="imagem" />
+      <h1>Calculadora de IMC</h1>
+      <form action="" id="forms">
+        <input
+          type="text"
+          id="weight"
+          placeholder="Peso (kg). Ex: 50"
+          required
+        />
+        <input
+          type="text"
+          id="height"
+          placeholder="Altura (m). Ex: 1.85"
+          required
+        />
+        <button type="submit">Calcular</button>
+        <div class="result" id="result"></div>
+      </form>
+    </div>
 
-
-<div class="calculator-container"> 
-    <img src="mymelody.png" alt="imagem"> 
-    <h1>Calculadora de IMC</h1> 
-    <input type="text" id="weight" placeholder="Peso (kg)">
-    <input type="text" id="height" placeholder="Altura (m)">
-    <button onclick="calculateIMC()">Calcular</button>
-    <div class="result" id="result"></div> 
-</div> 
-
-<script>
-    function calculateIMC() { /* Valores do IMC */
-        var weight = parseFloat(document.getElementById('weight').value);
-        var height = parseFloat(document.getElementById('height').value);
-
-        if (isNaN(weight) || isNaN(height) || height === 0) {
-            document.getElementById('result').innerText = 'Por favor querido(a), insira valores válidos!.';
-            return;
-        } /* Resposta caso valores em branco */
-
-        var imc = weight/(height*height) /* Valores e exbição do IMC */
-        document.getElementById('result').innerText = 'Seu IMC é: ' + imc.toFixed(2);
-    }
-    /* Minha assinatura */
-</script>
-<footer>
+    <script src="./js/script.js"></script>
+    <!--  Minha assinatura  -->
     <footer>
-        <p style="color: rgb(248, 242, 242); font-weight: bold; text-shadow: 2px 2px 4px rgba(15, 15, 15, 0.5);"
-        >Feito pela Mari♡</p>
-    </footer> 
-    
-</footer>
-</body>
-</form>
+      <p
+        style="
+          color: rgb(248, 242, 242);
+          font-weight: bold;
+          text-shadow: 2px 2px 4px rgba(15, 15, 15, 0.5);
+        "
+      >
+        Feito pela Mari♡
+      </p>
+    </footer>
+  </body>
 </html>

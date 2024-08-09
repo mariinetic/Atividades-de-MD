@@ -1,0 +1,79 @@
+/* Fontes e mudanças de cor */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fde2e2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* mudança para fundo branco */
+.calculator-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* mudança do título */
+h1 {
+  color: #ff66b2;
+}
+
+/* Locações de botões */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+/* decorações para fundo, texto e borda dos botões */
+button {
+  background-color: #ffffff;
+  color: #ff66b2;
+  border: 1px solid #ff66b2;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* degrade no click dos botões de informações */
+button:hover {
+  background-color: #ff66b2;
+  color: #ffffff;
+}
+
+/* mudança de cor para mostrar resultado */
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #ff66b2;
+}
+
+/* tamanho da foto e formato */
+img {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#moreinfo a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(56, 54, 56, 0.8);
+  transition: color 0.3s;
+}
+
+/* mudança de cor para click */
+#moreinfo a:hover {
+  color: pink;
+}
+#moreinfo a:active {
+  color: pink;
+}
